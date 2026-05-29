@@ -3,98 +3,125 @@
   * { box-sizing: border-box; }
   .wrap { padding: 1.5rem 0; font-family: var(--font-sans); }
   .header { background: linear-gradient(135deg, #0a4a37 0%, #0F6E56 100%); border-radius: var(--border-radius-lg); padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; }
-  .header-sub { color: #9FE1CB; font-size: 11px; letter-spacing: 0.08em; margin: 0 0 4px; }
-  .header-title { color: #fff; font-size: 18px; font-weight: 500; margin: 0; }
-  .section-title { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: 0.08em; margin: 0 0 10px; }
+  .header-sub { color: #9FE1CB; font-size: 12px; letter-spacing: 0.08em; margin: 0 0 4px; }
+  .header-title { color: #fff; font-size: 20px; font-weight: 500; margin: 0 0 8px; }
+  .header-desc { color: #C8EFE3; font-size: 13px; line-height: 1.6; margin: 0; }
+  .section-title { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); letter-spacing: 0.06em; margin: 0 0 12px; }
   .card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 1.25rem; }
 
   /* CR型 */
-  .cr-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 8px; margin-bottom: 1.5rem; }
-  .cr-card { border-radius: var(--border-radius-md); padding: 12px 10px; border: 0.5px solid var(--color-border-tertiary); }
-  .cr-icon { font-size: 11px; font-weight: 500; margin-bottom: 6px; }
-  .cr-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
-  .cr-desc { font-size: 11px; color: var(--color-text-secondary); line-height: 1.5; margin-bottom: 6px; }
-  .cr-media { font-size: 10px; color: var(--color-text-tertiary); }
+  .cr-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-bottom: 1.5rem; }
+  .cr-card { border-radius: var(--border-radius-md); padding: 14px 12px; border: 0.5px solid var(--color-border-tertiary); }
+  .cr-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+  .cr-num { font-size: 11px; font-weight: 500; }
+  .cr-now { font-size: 10px; padding: 2px 6px; border-radius: 4px; background: #0F6E56; color: #fff; }
+  .cr-name { font-size: 15px; font-weight: 500; margin-bottom: 6px; }
+  .cr-desc { font-size: 12px; line-height: 1.6; margin-bottom: 8px; }
+  .cr-media { font-size: 11px; margin-bottom: 8px; }
+  .cr-link { display: inline-block; font-size: 11px; padding: 3px 8px; border-radius: 4px; text-decoration: none; border: 0.5px solid; }
 
   .cr-official { background: #E1F5EE; border-color: #1D9E75; }
   .cr-official .cr-name { color: #0F6E56; }
+  .cr-official .cr-media { color: #0F6E56; }
+  .cr-official .cr-link { background: #fff; color: #0F6E56; border-color: #1D9E75; }
   .cr-ugc { background: #FAEEDA; border-color: #EF9F27; }
   .cr-ugc .cr-name { color: #854F0B; }
+  .cr-ugc .cr-media { color: #854F0B; }
+  .cr-ugc .cr-link { background: #fff; color: #854F0B; border-color: #EF9F27; }
   .cr-edu { background: #EAF3DE; border-color: #639922; }
   .cr-edu .cr-name { color: #3B6D11; }
+  .cr-edu .cr-media { color: #3B6D11; }
+  .cr-edu .cr-link { background: #fff; color: #3B6D11; border-color: #639922; }
   .cr-news { background: #E6F1FB; border-color: #378ADD; }
   .cr-news .cr-name { color: #185FA5; }
+  .cr-news .cr-media { color: #185FA5; }
+  .cr-news .cr-link { background: #fff; color: #185FA5; border-color: #378ADD; }
 
-  /* フェーズ */
-  .phase-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin-bottom: 1.5rem; }
-  .phase-card { border-radius: var(--border-radius-md); padding: 12px; border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary); }
-  .phase-label { font-size: 10px; font-weight: 500; color: var(--color-text-tertiary); margin-bottom: 4px; letter-spacing: 0.06em; }
-  .phase-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 8px; }
-  .phase-item { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 4px; display: flex; gap: 6px; align-items: flex-start; }
-  .phase-dot { width: 5px; height: 5px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
-  .dot-now { background: #1D9E75; }
-  .dot-next { background: #EF9F27; }
-  .dot-later { background: #378ADD; }
-
-  /* 媒体×型マトリクス */
-  .matrix { width: 100%; border-collapse: collapse; font-size: 11px; }
-  .matrix th { font-size: 10px; font-weight: 500; color: var(--color-text-secondary); padding: 6px 8px; border-bottom: 0.5px solid var(--color-border-tertiary); text-align: left; }
-  .matrix td { padding: 6px 8px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); vertical-align: middle; }
+  /* マトリクス */
+  .matrix { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .matrix th { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); padding: 8px; border-bottom: 0.5px solid var(--color-border-tertiary); text-align: left; }
+  .matrix td { padding: 8px; border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); vertical-align: middle; }
   .matrix tr:last-child td { border-bottom: none; }
-  .badge { display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 500; margin: 1px; }
+  .badge { display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 500; margin: 2px 1px; }
   .b-green { background: #EAF3DE; color: #3B6D11; }
   .b-amber { background: #FAEEDA; color: #854F0B; }
   .b-blue { background: #E6F1FB; color: #185FA5; }
   .b-gray { background: var(--color-background-secondary); color: var(--color-text-tertiary); }
   .b-teal { background: #E1F5EE; color: #0F6E56; }
-  .media-name { font-size: 12px; font-weight: 500; color: var(--color-text-primary); }
-  .status-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
+  .b-pink { background: #FBEAF0; color: #993556; }
+  .media-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+  .status-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 4px; vertical-align: middle; }
   .s-active { background: #1D9E75; }
   .s-next { background: #EF9F27; }
   .s-plan { background: #B4B2A9; }
+  .priority-text { font-size: 12px; color: var(--color-text-secondary); }
 
-  /* MEK還元 */
-  .mek-row { display: flex; gap: 8px; align-items: flex-start; font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px; line-height: 1.6; }
+  /* フェーズ */
+  .phase-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin-bottom: 1.5rem; }
+  .phase-card { border-radius: var(--border-radius-md); padding: 14px 12px; border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary); }
+  .phase-label { font-size: 10px; font-weight: 500; color: var(--color-text-tertiary); margin-bottom: 4px; letter-spacing: 0.06em; }
+  .phase-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 10px; }
+  .phase-item { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 6px; display: flex; gap: 6px; align-items: flex-start; line-height: 1.5; }
+  .phase-dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
+  .dot-now { background: #1D9E75; }
+  .dot-next { background: #EF9F27; }
+  .dot-later { background: #378ADD; }
+
+  /* MEK */
+  .mek-row { display: flex; gap: 8px; align-items: flex-start; font-size: 13px; color: var(--color-text-secondary); margin-bottom: 10px; line-height: 1.6; }
   .mek-row:last-child { margin-bottom: 0; }
-  .mek-dot { width: 6px; height: 6px; border-radius: 50%; background: #0F6E56; margin-top: 5px; flex-shrink: 0; }
+  .mek-dot { width: 6px; height: 6px; border-radius: 50%; background: #0F6E56; margin-top: 6px; flex-shrink: 0; }
 </style>
 
 <div class="wrap">
   <div class="header">
     <p class="header-sub">かれいどスコープ × MEK</p>
     <p class="header-title">広告戦略 全体設計</p>
+    <p class="header-desc">Metaを軸に成果を維持しながら、余剰予算で新しい媒体・手法を検証する。検証の優先軸は無形商材・高単価・web完結案件への横展開。</p>
   </div>
 
-  <!-- CR型の説明 -->
+  <!-- CR型 -->
   <div class="section-title">広告クリエイティブの4つの型</div>
   <div class="cr-grid">
     <div class="cr-card cr-official">
-      <div class="cr-icon">①</div>
+      <div class="cr-header">
+        <span class="cr-num">①</span>
+        <span class="cr-now">今運用中の動画</span>
+      </div>
       <div class="cr-name">公式型</div>
       <div class="cr-desc">お店・会社が自ら正面から伝える。信頼感・ブランド感を出しやすい</div>
       <div class="cr-media">→ Meta・YouTube</div>
     </div>
     <div class="cr-card cr-ugc">
-      <div class="cr-icon">②</div>
+      <div class="cr-header">
+        <span class="cr-num">②</span>
+      </div>
       <div class="cr-name">UGC型</div>
       <div class="cr-desc">ユーザーが体験・紹介している風に見せる。広告感が薄く反応が取りやすい</div>
       <div class="cr-media">→ TikTok・X</div>
+      <a class="cr-link" href="https://youtube.com/shorts/XqtTE6wmHUs" target="_blank">参考動画を見る →</a>
     </div>
     <div class="cr-card cr-edu">
-      <div class="cr-icon">③</div>
+      <div class="cr-header">
+        <span class="cr-num">③</span>
+      </div>
       <div class="cr-name">教育型</div>
       <div class="cr-desc">プロや専門家がじっくり教える。高単価・無形商材との相性が特に良い</div>
       <div class="cr-media">→ YouTube・Meta</div>
+      <a class="cr-link" href="https://youtube.com/shorts/TalPBk4VeTE" target="_blank">参考動画を見る →</a>
     </div>
     <div class="cr-card cr-news">
-      <div class="cr-icon">④</div>
+      <div class="cr-header">
+        <span class="cr-num">④</span>
+      </div>
       <div class="cr-name">ニュース型</div>
       <div class="cr-desc">第三者メディアが取り上げたように見せる。リテラシーが低い層にも届く</div>
       <div class="cr-media">→ Yahoo・LINE・ネイティブ</div>
+      <a class="cr-link" href="https://youtube.com/shorts/R3qfIvBuFA0" target="_blank">参考動画を見る →</a>
     </div>
   </div>
 
-  <!-- 媒体×型マトリクス -->
+  <!-- マトリクス -->
   <div class="section-title">媒体 × CR型 × 優先度</div>
   <div class="card">
     <table class="matrix">
@@ -110,48 +137,68 @@
         <tr>
           <td><span class="media-name">Meta</span></td>
           <td><span class="status-dot s-active"></span>稼働中・主軸</td>
-          <td><span class="badge b-teal">公式型</span><span class="badge b-green">教育型</span></td>
-          <td><span class="badge b-teal">最優先・維持</span>成果の軸。現状維持で安定集客</td>
+          <td>
+            <span class="badge b-teal">①公式型</span>
+            <span class="badge b-amber">②UGC型</span>
+            <span class="badge b-green">③教育型</span>
+            <span class="badge b-blue">④ニュース型</span>
+          </td>
+          <td><span class="badge b-teal">最優先・維持</span><span class="priority-text"> 全型に対応。成果の軸</span></td>
         </tr>
         <tr>
           <td><span class="media-name">YouTube</span></td>
           <td><span class="status-dot s-active"></span>稼働中</td>
-          <td><span class="badge b-teal">公式型</span><span class="badge b-green">教育型</span></td>
-          <td><span class="badge b-teal">優先</span>無形商材の教育導線に直結。長尺・教育型を追加予定</td>
+          <td>
+            <span class="badge b-teal">①公式型</span>
+            <span class="badge b-amber">②UGC型</span>
+            <span class="badge b-green">③教育型</span>
+            <span class="badge b-blue">④ニュース型</span>
+          </td>
+          <td><span class="badge b-teal">優先</span><span class="priority-text"> 全型に対応。教育型を追加予定</span></td>
         </tr>
         <tr>
           <td><span class="media-name">X</span></td>
           <td><span class="status-dot s-next"></span>次に着手</td>
-          <td><span class="badge b-amber">UGC型</span><span class="badge b-teal">公式型</span></td>
-          <td><span class="badge b-amber">高</span>コレクター層在籍。既存素材で即入稿可能</td>
+          <td>
+            <span class="badge b-teal">①公式型</span>
+            <span class="badge b-amber">②UGC型</span>
+          </td>
+          <td><span class="badge b-amber">高</span><span class="priority-text"> コレクター層在籍。即入稿可能</span></td>
         </tr>
         <tr>
           <td><span class="media-name">TikTok</span></td>
           <td><span class="status-dot s-next"></span>次に着手</td>
-          <td><span class="badge b-amber">UGC型</span></td>
-          <td><span class="badge b-amber">中</span>知見目的。既存素材で即入稿可能</td>
+          <td>
+            <span class="badge b-amber">②UGC型</span>
+          </td>
+          <td><span class="badge b-amber">中</span><span class="priority-text"> 知見目的。即入稿可能</span></td>
         </tr>
         <tr>
           <td><span class="media-name">LINE</span></td>
           <td><span class="status-dot s-plan"></span>準備中</td>
-          <td><span class="badge b-teal">公式型</span><span class="badge b-blue">ニュース型</span></td>
-          <td><span class="badge b-gray">中</span>ターゲット層在籍率高。アカウント開設から</td>
+          <td>
+            <span class="badge b-teal">①公式型</span>
+            <span class="badge b-blue">④ニュース型</span>
+          </td>
+          <td><span class="badge b-gray">中</span><span class="priority-text"> ターゲット層在籍率高</span></td>
         </tr>
         <tr>
           <td><span class="media-name">Yahoo</span></td>
           <td><span class="status-dot s-plan"></span>計画中</td>
-          <td><span class="badge b-blue">ニュース型</span></td>
-          <td><span class="badge b-gray">低〜中</span>ニュース型LPと合わせて検証</td>
+          <td>
+            <span class="badge b-blue">④ニュース型</span>
+          </td>
+          <td><span class="badge b-gray">低〜中</span><span class="priority-text"> ニュース型LPと合わせて検証</span></td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <!-- フェーズ設計 -->
+  <!-- フェーズ -->
   <div class="section-title">フェーズ設計</div>
   <div class="phase-grid">
     <div class="phase-card">
-      <div class="phase-label">PHASE 1 · 今すぐ</div>
+      <div class="phase-label">PHASE 1 · 順次実施</div>
       <div class="phase-title">既存素材を横展開</div>
       <div class="phase-item"><span class="phase-dot dot-now"></span>X広告 アカウント開設・入稿</div>
       <div class="phase-item"><span class="phase-dot dot-now"></span>TikTok広告 アカウント開設・入稿</div>
@@ -175,8 +222,8 @@
     </div>
   </div>
 
-  <!-- MEKへの還元 -->
-  <div class="section-title">MEKへの還元</div>
+  <!-- MEK -->
+  <div class="section-title">MEKにどう繋がるのか</div>
   <div class="card">
     <div class="mek-row"><span class="mek-dot"></span>4つのCR型の設計ノウハウを蓄積し、無形商材・高単価案件の集客設計に横展開できる</div>
     <div class="mek-row"><span class="mek-dot"></span>媒体別に刺さるCR型の知見が得られ、新規クライアントへの提案精度が上がる</div>
